@@ -143,7 +143,7 @@ class _RegistrarCustomersScreenState extends State<RegistrarCustomersScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      appBar: MyAppBar(actions: true, backButton: true,title: 'Registrar',),
+      appBar: MyAppBar(actions: true, backButton: true,title: 'Registrar Dashboard',),
       endDrawer:  EndDrawer(),
       body: Column(
         children: [

@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Roboto',
       ),
       debugShowCheckedModeBanner: false,
-      home: RegistrarCustomersScreen(),
+      home: SplashScreen(),
     );
   }
 }

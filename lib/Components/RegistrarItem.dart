@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:ke_domain_connect/Theme.dart';
 
 import '../Screens/BuyNow.dart';
+import '../Screens/Packages.dart';
+
 class RegistrarItem extends StatelessWidget {
   final String companyName;
   final String email;
   final String phone;
   final String tld;
   final String price;
-
 
   const RegistrarItem({
     super.key,
@@ -17,7 +18,6 @@ class RegistrarItem extends StatelessWidget {
     required this.phone,
     required this.tld,
     required this.price,
-
   });
 
   @override
@@ -46,7 +46,7 @@ class RegistrarItem extends StatelessWidget {
           // Domain name
           Text(
             tld,
-           style: CustomTheme.bodyStylegreen,
+            style: CustomTheme.bodyStylegreen,
           ),
           const SizedBox(height: 6),
 
@@ -85,9 +85,9 @@ class RegistrarItem extends StatelessWidget {
                 phone,
                 style: CustomTheme.bodyStyle,
               ),
-
             ],
           ),
+          const SizedBox(height: 6),
           Text(
             'Price: Ksh $price',
             style: CustomTheme.bodyStyleRedBold,
@@ -98,13 +98,14 @@ class RegistrarItem extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-                onPressed: () {
-                  showBuyNowPopup(
-                    context,
-                    tld,  // or your domain name
-                    companyName,
-                  );
-                },
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HostingPackagesScreen(),
+                  ),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xFFF15E33),
                 foregroundColor: Colors.white,

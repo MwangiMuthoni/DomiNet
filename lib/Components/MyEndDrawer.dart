@@ -35,15 +35,7 @@ class _EndDrawerState extends State<EndDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    void logout() async {
-      var res = await Network().getData('/logout');
-      json.decode(res.body);
-      SharedPreferences localStorage = await SharedPreferences.getInstance();
-      localStorage.remove('token');
-      localStorage.remove('user');
-      Navigator.of(context)
-          .pushNamedAndRemoveUntil("/login", (Route route) => false);
-    }
+
 
     return Drawer(
       child: ListView(
